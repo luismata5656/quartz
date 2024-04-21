@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "STAT 2050",
+    pageTitle: "The Vault",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
@@ -22,28 +22,28 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        body: "JetBrains Mono",
         code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
+          light: "#fdf6e3", // light0-hard (Lightest)
+          lightgray: "#f1e2b8", // light0-soft
+          gray: "#b7a25f", // dark
+          darkgray: "#8b7d54", // dark2
+          dark: "#5a4b32", // dark4
+          secondary: "#ffcb6b", // neutral-yellow
+          tertiary: "#a0957a", // dark3
           highlight: "rgba(143, 159, 169, 0.15)",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
+          light: "#282828", // dark0-hard (Darkest)
+          lightgray: "#3c3836", // dark0-soft
+          gray: "#bdae93", // darkgray
+          darkgray: "#fdf6e3", // dark2
+          dark: "#f1e2b8", // gray
+          secondary: "#ffcb6b", // neutral-yellow
+          tertiary: "#665c54", // darkgray
           highlight: "rgba(143, 159, 169, 0.15)",
         },
       },
@@ -63,7 +63,7 @@ const config: QuartzConfig = {
         },
         keepBackground: false,
       }),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: true }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
